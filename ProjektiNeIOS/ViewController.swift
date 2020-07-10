@@ -12,6 +12,45 @@ class ViewController: UIViewController {
     
     var db: OpaquePointer?
 
+    @IBOutlet weak var ObjLojtari1: UITextField!
+    @IBOutlet weak var ObjLojtari2: UITextField!
+    
+    @IBAction func BtnRuaj(_ sender: Any) {
+        let lojt1 = ObjLojtari1.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let lojt2 = ObjLojtari2.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        if(lojt1?.isEmpty)! {
+            	print("Lojtari1 nuk eshte shenuar!")
+            return;
+        }
+        
+        if(lojt2?.isEmpty)! {
+            print("Lojtari2 nuk eshte shenuar!")
+            return;
+        }
+        
+        var stmt: OpaquePointer?
+        let insertQuery = "INSERT INTO Lojtaret (lojt1, lojt2) VALUES(?, ?)"
+        
+        if sqlite3_prepare(db, insertQuery, -1, &stmt, nil) != SQLITE_OK
+        {
+            print("Error binding query")
+        }
+        if sqlite3_bind_text(stmt, 1, lojt1, -1, nil) != SQLITE_OK
+        {
+            print("Error binding lojtari1")
+        }
+        if sqlite3_bind_text(stmt, 2, lojt2, -1, nil) != SQLITE_OK
+        {
+            print("Error binding lojtari2")
+        }
+        
+        if sqlite3_step(stmt) == SQLITE_DONE
+        {
+            print("Lojtaret jane ruajtur me sukses")
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
