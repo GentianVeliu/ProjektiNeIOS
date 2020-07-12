@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var db: OpaquePointer?
 
     @IBOutlet weak var ObjLojtari1: UITextField!
+    
     @IBOutlet weak var ObjLojtari2: UITextField!
     
     @IBAction func BtnRuaj(_ sender: Any) {
