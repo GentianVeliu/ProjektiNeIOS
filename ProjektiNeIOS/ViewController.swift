@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBAction func ShikoHistorikun(_ sender: UIButton) {
         
-        let nextView:Historiku = storyboard?.instantiateViewController(withIdentifier: "") as! Historiku
+        let nextView:Historiku = storyboard?.instantiateViewController(withIdentifier: "Historikuid") as! Historiku
         
         self.navigationController?.pushViewController(nextView, animated:true)
     }
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
             return
         }
         
-        let createTableQuery = "CREATE TABLE IF NOT EXISTS Lojtaret (id INTEGER PRIMARY KEY AUTOINCREMENT, name1 Text, name2 Text)"
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS Lojtaret (id INTEGER PRIMARY KEY AUTOINCREMENT, lojt1 Text, lojt2 Text)"
         
         if sqlite3_exec(db, createTableQuery, nil, nil, nil) != SQLITE_OK{
             print("Nuk u krijua tabela")
