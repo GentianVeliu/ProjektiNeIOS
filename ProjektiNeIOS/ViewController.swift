@@ -16,11 +16,16 @@ class ViewController: UIViewController {
         
         self.navigationController?.pushViewController(nextView, animated:true)
     }
+    
+    
     var db: OpaquePointer?
 
     @IBOutlet weak var ObjLojtari1: UITextField!
     
     @IBOutlet weak var ObjLojtari2: UITextField!
+    
+    var nameText1 = ""
+    var nameText2 = ""
     
     @IBAction func BtnRuaj(_ sender: Any) {
         let lojt1 = ObjLojtari1.text?.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -56,6 +61,17 @@ class ViewController: UIViewController {
             print("Lojtaret jane ruajtur me sukses")
         }
         
+    }
+    
+    @IBAction func Luaj(_ sender: Any) {
+        
+        self.nameText1 = ObjLojtari1.text!
+        self.nameText2 = ObjLojtari2.text!
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc  = segue.destination as! Loja
+        vc.finalName1 = nameText1
+        vc.finalName2 = nameText2
     }
     
     override func viewDidLoad() {

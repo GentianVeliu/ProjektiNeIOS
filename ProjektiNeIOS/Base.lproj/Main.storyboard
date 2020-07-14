@@ -56,7 +56,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDK-fh-rDR">
-                                <rect key="frame" x="88" y="254" width="134" height="30"/>
+                                <rect key="frame" x="165" y="251" width="134" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ruaj"/>
                                 <connections>
@@ -77,6 +77,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcT-vs-PrY">
+                                <rect key="frame" x="11" y="251" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Luaj"/>
+                                <connections>
+                                    <action selector="Luaj:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cTM-uk-Cge"/>
+                                    <segue destination="UXm-7n-t7V" kind="show" identifier="BartjaEmrave" id="G1A-yz-6er"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -91,6 +100,41 @@
             </objects>
             <point key="canvasLocation" x="298.125" y="117.25352112676056"/>
         </scene>
+        <!--Loja-->
+        <scene sceneID="4OK-Zg-zlx">
+            <objects>
+                <viewController storyboardIdentifier="LojaId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UXm-7n-t7V" customClass="Loja" customModule="ProjektiNeIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z0S-Aj-gbD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nn-xP-D2m">
+                                <rect key="frame" x="16" y="194" width="167" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zN5-eQ-Iip">
+                                <rect key="frame" x="16" y="146" width="167" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="fn7-kJ-Yty"/>
+                    </view>
+                    <connections>
+                        <outlet property="EmriLojtarit1" destination="zN5-eQ-Iip" id="Djf-px-UfN"/>
+                        <outlet property="EmriLojtarit2" destination="6nn-xP-D2m" id="79u-Gf-DjV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSk-dD-kxr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113.75" y="450"/>
+        </scene>
         <!--Historiku-->
         <scene sceneID="Izl-7j-Yp5">
             <objects>
@@ -104,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pz-sn-kVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975" y="115.14084507042254"/>
+            <point key="canvasLocation" x="1118" y="-227"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fpy-v8-kDN">
