@@ -10,6 +10,10 @@ import UIKit
 import SQLite3
 class ViewController: UIViewController {
     
+    
+
+    
+    
     @IBAction func ShikoHistorikun(_ sender: UIButton) {
         
         let nextView:Historiku = storyboard?.instantiateViewController(withIdentifier: "Historikuid") as! Historiku

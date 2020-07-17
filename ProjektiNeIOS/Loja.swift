@@ -11,6 +11,15 @@ import UIKit
 
 class Loja: UIViewController {
 
+    @IBAction func btnDilni(_ sender: Any)
+    {
+        let njofto = UIAlertController(title: "TicTacToe", message: "A deshironi te dilni?", preferredStyle: .actionSheet)
+        njofto.addAction(UIAlertAction(title: "Po", style: .destructive, handler: { (_) in exit(0)
+            
+        }))
+        njofto.addAction(UIAlertAction(title: "Jo", style: .cancel, handler: nil))
+        present(njofto, animated: true, completion: nil)    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         EmriLojtarit1.text = finalName1
