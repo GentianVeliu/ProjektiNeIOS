@@ -24,6 +24,8 @@ class Loja: UIViewController {
         super.viewDidLoad()
         EmriLojtarit1.text = finalName1
         EmriLojtarit2.text = finalName2
+        
+        
 
         // Do any additional setup after loading the view.
     }

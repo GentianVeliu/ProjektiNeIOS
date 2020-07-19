@@ -32,30 +32,32 @@ class ViewController: UIViewController {
     var nameText2 = ""
     
     @IBAction func BtnRuaj(_ sender: Any) {
-        let lojt1 = ObjLojtari1.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        let lojt2 = ObjLojtari2.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        if(lojt1?.isEmpty)! {
+        let lojtari1 = ObjLojtari1.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let lojtari2 = ObjLojtari2.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if(lojtari1?.isEmpty)! {
             	print("Lojtari1 nuk eshte shenuar!")
             return;
         }
         
-        if(lojt2?.isEmpty)! {
+        if(lojtari2?.isEmpty)! {
             print("Lojtari2 nuk eshte shenuar!")
             return;
         }
         
         var stmt: OpaquePointer?
-        let insertQuery = "INSERT INTO Lojtaret (lojt1, lojt2) VALUES(?, ?)"
+        
+        let insertQuery = "INSERT INTO Lojtaret (lojtari1, lojtari2) VALUES(?, ?)"
         
         if sqlite3_prepare(db, insertQuery, -1, &stmt, nil) != SQLITE_OK
         {
             print("Error binding query")
         }
-        if sqlite3_bind_text(stmt, 1, lojt1, -1, nil) != SQLITE_OK
+        if sqlite3_bind_text(stmt, 1, lojtari1, -1, nil) != SQLITE_OK
         {
             print("Error binding lojtari1")
         }
-        if sqlite3_bind_text(stmt, 2, lojt2, -1, nil) != SQLITE_OK
+        if sqlite3_bind_text(stmt, 2, lojtari2, -1, nil) != SQLITE_OK
         {
             print("Error binding lojtari2")
         }
@@ -89,13 +91,13 @@ class ViewController: UIViewController {
             return
         }
         
-        let createTableQuery = "CREATE TABLE IF NOT EXISTS Lojtaret (id INTEGER PRIMARY KEY AUTOINCREMENT, lojt1 Text, lojt2 Text)"
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS Lojtaret (INTEGER PRIMARY KEY AUTOINCREMENT, lojtari1 TEXT, lojtari2 TEXT)"
         
         if sqlite3_exec(db, createTableQuery, nil, nil, nil) != SQLITE_OK{
             print("Nuk u krijua tabela")
             return
         }
-        print("Cdo gje eshte ne rregull")
+        print("Tabela u krijua")
         
     }
     
