@@ -14,6 +14,10 @@ X O O   O X O   O O X   O O O   X X X   O O O   O X O   O X O
 X O O   O X O   O O X   O O O   O O O   X X X   O O X   X O O
 ```
 
+## Disa foto se si duhet të regjistroheni dhe të luani.
+![fotoGIT](https://user-images.githubusercontent.com/44606115/88232868-e9dcf280-cc76-11ea-89af-d1577a93f58c.PNG)
+
+
 
 ## Autoret
 
