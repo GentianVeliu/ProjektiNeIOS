@@ -10,17 +10,7 @@ import UIKit
 import SQLite3
 class ViewController: UIViewController {
     
-    
-
-    
-    
-    @IBAction func ShikoHistorikun(_ sender: UIButton) {
-        
-        let nextView:Historiku = storyboard?.instantiateViewController(withIdentifier: "Historikuid") as! Historiku
-        
-        self.navigationController?.pushViewController(nextView, animated:true)
-    }
-    
+  
     
     var db: OpaquePointer?
 
@@ -36,18 +26,18 @@ class ViewController: UIViewController {
         let lojtari2 = ObjLojtari2.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if(lojtari1?.isEmpty)! {
-            	print("Lojtari1 nuk eshte shenuar!")
+            	print("Lojtari 1 nuk eshte shenuar!")
             return;
         }
         
         if(lojtari2?.isEmpty)! {
-            print("Lojtari2 nuk eshte shenuar!")
+            print("Lojtari 2 nuk eshte shenuar!")
             return;
         }
         
         var stmt: OpaquePointer?
         
-        let insertQuery = "INSERT INTO Lojtaret (lojtari1, lojtari2) VALUES(?, ?)"
+        let insertQuery = "INSERT INTO Lojtaret (name1, name2) VALUES(?, ?)"
         
         if sqlite3_prepare(db, insertQuery, -1, &stmt, nil) != SQLITE_OK
         {
@@ -55,11 +45,11 @@ class ViewController: UIViewController {
         }
         if sqlite3_bind_text(stmt, 1, lojtari1, -1, nil) != SQLITE_OK
         {
-            print("Error binding lojtari1")
+            print("Error binding lojtari 1")
         }
         if sqlite3_bind_text(stmt, 2, lojtari2, -1, nil) != SQLITE_OK
         {
-            print("Error binding lojtari2")
+            print("Error binding lojtari 2")
         }
         
         if sqlite3_step(stmt) == SQLITE_DONE
@@ -91,7 +81,7 @@ class ViewController: UIViewController {
             return
         }
         
-        let createTableQuery = "CREATE TABLE IF NOT EXISTS Lojtaret (INTEGER PRIMARY KEY AUTOINCREMENT, lojtari1 TEXT, lojtari2 TEXT)"
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS Lojtaret (INTEGER PRIMARY KEY AUTOINCREMENT, name1 TEXT, name2 TEXT)"
         
         if sqlite3_exec(db, createTableQuery, nil, nil, nil) != SQLITE_OK{
             print("Nuk u krijua tabela")
@@ -100,12 +90,9 @@ class ViewController: UIViewController {
         print("Tabela u krijua")
         
     }
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

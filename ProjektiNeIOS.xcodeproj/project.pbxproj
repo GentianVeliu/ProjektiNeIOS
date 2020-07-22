@@ -14,8 +14,10 @@
 		BB00DD3024B7376C0077ED05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB00DD2E24B7376C0077ED05 /* LaunchScreen.storyboard */; };
 		BB00DD3B24B7376D0077ED05 /* ProjektiNeIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00DD3A24B7376D0077ED05 /* ProjektiNeIOSTests.swift */; };
 		BB00DD4624B7376E0077ED05 /* ProjektiNeIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00DD4524B7376E0077ED05 /* ProjektiNeIOSUITests.swift */; };
+		E24BF6CA24C6267800A3162F /* Nought.png in Resources */ = {isa = PBXBuildFile; fileRef = E24BF6C724C6267500A3162F /* Nought.png */; };
+		E24BF6CB24C6267800A3162F /* Board.png in Resources */ = {isa = PBXBuildFile; fileRef = E24BF6C824C6267600A3162F /* Board.png */; };
+		E24BF6CC24C6267800A3162F /* Cross.png in Resources */ = {isa = PBXBuildFile; fileRef = E24BF6C924C6267700A3162F /* Cross.png */; };
 		E24E10FE24BE3A6C00AED8EB /* Loja.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E10FD24BE3A6C00AED8EB /* Loja.swift */; };
-		E2B1120824BA9A990094F81E /* Historiku.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B1120724BA9A990094F81E /* Historiku.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +51,10 @@
 		BB00DD4124B7376E0077ED05 /* ProjektiNeIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjektiNeIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB00DD4524B7376E0077ED05 /* ProjektiNeIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjektiNeIOSUITests.swift; sourceTree = "<group>"; };
 		BB00DD4724B7376E0077ED05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E24BF6C724C6267500A3162F /* Nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nought.png; sourceTree = "<group>"; };
+		E24BF6C824C6267600A3162F /* Board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Board.png; sourceTree = "<group>"; };
+		E24BF6C924C6267700A3162F /* Cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cross.png; sourceTree = "<group>"; };
 		E24E10FD24BE3A6C00AED8EB /* Loja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loja.swift; sourceTree = "<group>"; };
-		E2B1120724BA9A990094F81E /* Historiku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historiku.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +108,10 @@
 				BB00DD2524B7376C0077ED05 /* AppDelegate.swift */,
 				BB00DD2724B7376C0077ED05 /* ViewController.swift */,
 				BB00DD2924B7376C0077ED05 /* Main.storyboard */,
+				E24BF6C824C6267600A3162F /* Board.png */,
+				E24BF6C924C6267700A3162F /* Cross.png */,
+				E24BF6C724C6267500A3162F /* Nought.png */,
 				E24E10FD24BE3A6C00AED8EB /* Loja.swift */,
-				E2B1120724BA9A990094F81E /* Historiku.swift */,
 				BB00DD2C24B7376C0077ED05 /* Assets.xcassets */,
 				BB00DD2E24B7376C0077ED05 /* LaunchScreen.storyboard */,
 				BB00DD3124B7376C0077ED05 /* Info.plist */,
@@ -238,8 +244,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24BF6CB24C6267800A3162F /* Board.png in Resources */,
 				BB00DD3024B7376C0077ED05 /* LaunchScreen.storyboard in Resources */,
 				BB00DD2D24B7376C0077ED05 /* Assets.xcassets in Resources */,
+				E24BF6CA24C6267800A3162F /* Nought.png in Resources */,
+				E24BF6CC24C6267800A3162F /* Cross.png in Resources */,
 				BB00DD2B24B7376C0077ED05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +276,6 @@
 			files = (
 				BB00DD2824B7376C0077ED05 /* ViewController.swift in Sources */,
 				BB00DD2624B7376C0077ED05 /* AppDelegate.swift in Sources */,
-				E2B1120824BA9A990094F81E /* Historiku.swift in Sources */,
 				E24E10FE24BE3A6C00AED8EB /* Loja.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
